@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results total="3" passed="0" failed="1" skipped="2">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-05-10T15:31:35Z" name="Default suite" finished-at="2022-05-10T15:32:21Z" duration-ms="46336">
+    <groups>
+    </groups>
+    <test started-at="2022-05-10T15:31:35Z" name="Default test" finished-at="2022-05-10T15:32:21Z" duration-ms="46336">
+      <class name="Vtiger.VtigerTask_Script">
+        <test-method is-config="true" signature="openBrower()[pri:0, instance:Vtiger.VtigerTask_Script@7e057f43]" started-at="2022-05-10T21:01:35Z" name="openBrower" finished-at="2022-05-10T21:01:49Z" duration-ms="14484" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBrower -->
+        <test-method is-config="true" signature="login()[pri:0, instance:Vtiger.VtigerTask_Script@7e057f43]" started-at="2022-05-10T21:01:49Z" name="login" finished-at="2022-05-10T21:01:53Z" duration-ms="3658" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method signature="testCreateNewTask()[pri:0, instance:Vtiger.VtigerTask_Script@7e057f43]" started-at="2022-05-10T21:01:53Z" name="testCreateNewTask" finished-at="2022-05-10T21:01:58Z" duration-ms="5751" status="FAIL">
+          <exception class="junit.framework.ComparisonFailure">
+            <message>
+              <![CDATA[Akshay Bote expected:<[Akshay Bote]> but was:<[Lead not created successfully]>]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[junit.framework.ComparisonFailure: Akshay Bote expected:<[Akshay Bote]> but was:<[Lead not created successfully]>
+	at junit.framework.Assert.assertEquals(Assert.java:85)
+	at Vtiger.LeadsPage.createLead(LeadsPage.java:42)
+	at Vtiger.VtigerTask_Script.testCreateNewTask(VtigerTask_Script.java:32)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1215)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.run(TestNG.java:1048)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- junit.framework.ComparisonFailure -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateNewTask -->
+        <test-method is-config="true" signature="logout()[pri:0, instance:Vtiger.VtigerTask_Script@7e057f43]" started-at="2022-05-10T21:01:58Z" name="logout" finished-at="2022-05-10T21:01:58Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logout -->
+        <test-method is-config="true" signature="login()[pri:0, instance:Vtiger.VtigerTask_Script@7e057f43]" started-at="2022-05-10T21:01:58Z" name="login" finished-at="2022-05-10T21:01:58Z" duration-ms="0" status="FAIL">
+          <exception class="java.lang.NullPointerException">
+            <message>
+              <![CDATA[Cannot invoke "Object.getClass()" because "obj" is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "Object.getClass()" because "obj" is null
+	at java.base/java.lang.reflect.Method.invoke(Method.java:561)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy13.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:315)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$100(ExpectedConditions.java:44)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:301)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:298)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:260)
+	at utilities.MySeleniumUtility.waitForElementDisplayed(MySeleniumUtility.java:234)
+	at utilities.MySeleniumUtility.typeInput(MySeleniumUtility.java:73)
+	at Vtiger.LoginPage_POM.loginIntoVtiger(LoginPage_POM.java:28)
+	at Vtiger.VtigerTask_Script.login(VtigerTask_Script.java:26)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:510)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:211)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:585)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1215)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.run(TestNG.java:1048)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method signature="testNewTaskDeletion()[pri:0, instance:Vtiger.VtigerTask_Script@7e057f43]" started-at="2022-05-10T21:02:21Z" name="testNewTaskDeletion" finished-at="2022-05-10T21:02:21Z" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testNewTaskDeletion -->
+        <test-method is-config="true" signature="logout()[pri:0, instance:Vtiger.VtigerTask_Script@7e057f43]" started-at="2022-05-10T21:02:21Z" name="logout" finished-at="2022-05-10T21:02:21Z" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logout -->
+        <test-method is-config="true" signature="login()[pri:0, instance:Vtiger.VtigerTask_Script@7e057f43]" started-at="2022-05-10T21:02:21Z" name="login" finished-at="2022-05-10T21:02:21Z" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method signature="testNewTaskUpdation()[pri:0, instance:Vtiger.VtigerTask_Script@7e057f43]" started-at="2022-05-10T21:02:21Z" name="testNewTaskUpdation" finished-at="2022-05-10T21:02:21Z" duration-ms="2" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testNewTaskUpdation -->
+        <test-method is-config="true" signature="logout()[pri:0, instance:Vtiger.VtigerTask_Script@7e057f43]" started-at="2022-05-10T21:02:21Z" name="logout" finished-at="2022-05-10T21:02:21Z" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logout -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:Vtiger.VtigerTask_Script@7e057f43]" started-at="2022-05-10T21:02:21Z" name="closeBrowser" finished-at="2022-05-10T21:02:21Z" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- Vtiger.VtigerTask_Script -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
