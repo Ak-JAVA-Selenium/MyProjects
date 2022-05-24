@@ -1,28 +1,29 @@
 package Listners;
 
+import org.testng.IReporter;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
+
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
+import com.aventstack.extentreports.observer.ExtentObserver;
+import com.aventstack.extentreports.observer.entity.ObservedEntity;
+import com.aventstack.extentreports.observer.entity.ReportEntity;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
-public class ExtendReport extends ScreenshotNew implements ITestListener {
+public class ExtendReport implements ITestListener,IReporter {
 
-	ExtentSparkReporter reporter;
 	ExtentReports report;
 	ExtentTest test;
-	ScreenshotNew SS;
 
-	ExtendReport() {
-		reporter = new ExtentSparkReporter(".\\src\\test\\java\\Vtiger\\report.html");
-		reporter.config().setCss("background-color:#5285c5");
+	public ExtendReport() {
+		ExtentSparkReporter reporter = new ExtentSparkReporter(".\\src\\test\\resources\\ExtentReports\\report.html");
 		reporter.config().setDocumentTitle("Test Doc Title");
 		reporter.config().setReportName("Vtiger Automation");
 		reporter.config().setTheme(Theme.STANDARD);
-		reporter.config().setTimelineEnabled(true);
 		report = new ExtentReports();
 		report.attachReporter(reporter);
 		report.setSystemInfo("User", "Akshay");
@@ -41,9 +42,10 @@ public class ExtendReport extends ScreenshotNew implements ITestListener {
 
 	@Override
 	public void onTestFailure(ITestResult result) {
-		ScreenshotNew SS = new ScreenshotNew();
+		ScreenshotNew sss= new ScreenshotNew();
+		String path = sss.TakeSS();
 		test = report.createTest(result.getMethod().getMethodName());
-		test.fail(result.getThrowable()).addScreenCaptureFromPath("");
+		test.fail(result.getThrowable()).addScreenCaptureFromPath(path);
 	}
 
 	@Override
