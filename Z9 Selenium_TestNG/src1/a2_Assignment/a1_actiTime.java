@@ -22,8 +22,6 @@ public class a1_actiTime {
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-		WebDriverWait wait = new WebDriverWait(driver, 20);
-
 		System.out.println("Title : " + driver.getTitle() + "\nTitle Lenght : " + driver.getTitle().length());
 
 		String url = "https://demo.actitime.com/login.do";

@@ -22,6 +22,6 @@ public class a6_Rediff_SignUp {
 
 		driver.findElement(By.cssSelector("input[name^='name']")).sendKeys("Dhanraj Shinde" );
 
-	//	driver.close();
+		driver.close();
 	}
 }

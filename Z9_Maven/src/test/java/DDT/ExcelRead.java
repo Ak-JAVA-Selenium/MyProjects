@@ -49,7 +49,7 @@ public class ExcelRead {
 		}
 		
 		FileOutputStream fos = new FileOutputStream(".\\src\\test\\resources\\testData\\Book1.xlsx");
-		row.createCell(9).setCellValue("Pass");
+		sheet.getRow(0).createCell(9).setCellValue("Pass");
 		workbook.write(fos);
 		fos.flush();
 		fos.close();

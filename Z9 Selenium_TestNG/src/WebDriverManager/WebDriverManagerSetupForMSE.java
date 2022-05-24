@@ -4,11 +4,12 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class WebDriverManagerSetupForIE {
+public class WebDriverManagerSetupForMSE {
 
 	public static void main(String[] args) {
 //		String driverPath = System.getProperty("user.dir") + "\\executables\\IEDriverServer.exe";
@@ -17,9 +18,9 @@ public class WebDriverManagerSetupForIE {
 					
 			//or Use WebDriverManager to manager chrome browser executable based on system requirement
 		//use setup method of WebDriverManager
-		WebDriverManager.iedriver().setup();
+		WebDriverManager.edgedriver().setup();
 		//step2: create an instance of Chrome Browser
-		WebDriver driver = new InternetExplorerDriver();
+		WebDriver driver = new EdgeDriver();
 		//maximize browser
 		driver.manage().window().maximize();
 		//implicit wait

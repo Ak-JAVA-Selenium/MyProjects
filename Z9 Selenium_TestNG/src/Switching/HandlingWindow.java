@@ -51,6 +51,7 @@ public class HandlingWindow {
 		// now you are allow to identify any element from home window
 		System.out.println("etrain page title: " + driver.getTitle());
 		System.out.println("etrain page ulr: " + driver.getCurrentUrl());
+		
 		// close current instance of browser
 		// driver.close();
 		// close all the driver instances opened by webdriver

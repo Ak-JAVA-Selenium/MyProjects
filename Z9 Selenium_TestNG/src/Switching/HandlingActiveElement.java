@@ -25,7 +25,7 @@ public class HandlingActiveElement {
 		//login in actitime application without identifying any object
 		activeObject.sendKeys("admin",Keys.TAB);
 		driver.switchTo().activeElement().sendKeys("manager",Keys.ENTER);
-
+		driver.close();
 	}
 
 }

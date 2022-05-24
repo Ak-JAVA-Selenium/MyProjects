@@ -96,7 +96,7 @@ public class a4_FlipkartOptions {
 
 		for (int i = 0; i < menu.size(); i++) {
 			WebElement ref = menu.get(i);
-			System.out.println("Menu option is: " + ref.getText());
+			System.out.println("Option is: " + ref.getText());
 			System.out.println(ref.isDisplayed());
 			System.out.println(ref.isEnabled());
 			System.out.println();

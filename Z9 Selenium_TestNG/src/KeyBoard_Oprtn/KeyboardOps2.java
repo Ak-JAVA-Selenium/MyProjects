@@ -14,7 +14,7 @@ public class KeyboardOps2 {
 		//login in actitime application using Enter key
 		driver.findElement(By.id("username")).sendKeys("admin",Keys.TAB);
 		driver.findElement(By.name("pwd")).sendKeys("manager",Keys.ENTER);
-		
+		driver.close();
 	}
 
 }

@@ -22,5 +22,4 @@ public class c4_OpenCart_Login { // ********************
 		register.click();
 		driver.switchTo().activeElement().sendKeys("DahnrajShinde",Keys.TAB);
 		driver.switchTo().activeElement().sendKeys("Dhanraj",Keys.TAB);
-		
 	}

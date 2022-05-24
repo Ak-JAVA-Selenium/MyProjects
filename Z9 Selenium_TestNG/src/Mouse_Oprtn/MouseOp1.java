@@ -27,6 +27,7 @@ public class MouseOp1 {
 		WebElement lastName = driver.findElement(By.cssSelector("input[placeholder='Last Name']"));
 		act.moveToElement(lastName).click().keyDown(Keys.CONTROL).sendKeys("v").keyUp(Keys.CONTROL).build().perform();
 
+		driver.close();
 	}
 
 }

@@ -22,20 +22,21 @@ public class b1_gsmarena_MobileNames {
 
 		driver.manage().window().maximize();
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+//		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-		WebDriverWait wait = new WebDriverWait(driver, 20);
+//		WebDriverWait wait = new WebDriverWait(driver, 20);
 
-		driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
+//		driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
 
 		driver.manage().deleteAllCookies();
 
 		driver.get("https://www.gsmarena.com/");
 		System.out.println("=============================");
 
-		WebElement realme = driver.findElement(By.cssSelector("a[href='realme-phones-118.php']"));
-		wait.until(ExpectedConditions.elementToBeClickable(realme));
-		realme.click();
+		driver.findElement(By.cssSelector("a[href='realme-phones-118.php']")).click();
+//		WebElement realme = driver.findElement(By.cssSelector("a[href='realme-phones-118.php']"));
+//		wait.until(ExpectedConditions.elementToBeClickable(realme));
+//		realme.click();
 
 		WebElement pf = driver.findElement(By.className("article-hgroup"));
 		System.out.println("List of : " + pf.getText() + "\n");
@@ -49,9 +50,10 @@ public class b1_gsmarena_MobileNames {
 		int k = i + 1;
 		System.out.println("=============================");
 
-		WebElement realme2 = driver.findElement(By.cssSelector("div[class='nav-pages']>:nth-child(3)"));
-		wait.until(ExpectedConditions.elementToBeClickable(realme2));
-		realme2.click();
+		driver.findElement(By.cssSelector("div[class='nav-pages']>:nth-child(3)")).click();
+//		WebElement realme2 = driver.findElement(By.cssSelector("div[class='nav-pages']>:nth-child(3)"));
+//		wait.until(ExpectedConditions.elementToBeClickable(realme2));
+//		realme2.click();
 
 		List<WebElement> option2 = driver.findElements(By.cssSelector("div[class='makers']>ul>li>a"));
 

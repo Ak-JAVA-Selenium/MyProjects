@@ -1,7 +1,4 @@
 package a1_Practice;
-
-import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -9,7 +6,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class a2_vTiger_Login {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 
 		String path = ".\\Drivers\\geckodriver.exe";
 
@@ -34,6 +31,7 @@ public class a2_vTiger_Login {
 		WebElement LoginButton = driver.findElement(By.tagName("button"));
 		LoginButton.click();
 
+		Thread.sleep(3000);
 		WebElement UserButton = driver.findElement(
 				By.xpath("/html[1]/body[1]/div[1]/nav[1]/div[1]/div[1]/div[4]/ul[1]/li[5]/div[1]/a[1]/span[1]"));
 		UserButton.click();

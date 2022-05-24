@@ -7,7 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 /**
  * In order to identify any object/element from the application UI we use findElement(By)
  * this method returns WebElement
- * 
+ * 	``q
  * By is predefined class in selenium and all its method are static which are also known as "locator"
  * Selenium support following locator:
  * id , name, linkText, partialLinkText, className, tagName, cssSelector, xpath

@@ -1,7 +1,6 @@
 package utilities;
 
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeMethod;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.Dimension;
@@ -10,7 +9,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -36,6 +34,7 @@ public class SeleniumUtility {
 			// step2: create an instance of Chrome Browser
 			driver = new FirefoxDriver();
 		}
+		driver.manage().window().maximize();
 		// maximize browser
 		driver.manage().window().setPosition(new Point(0, 0));
 		driver.manage().window().setSize(new Dimension(1000, 720));

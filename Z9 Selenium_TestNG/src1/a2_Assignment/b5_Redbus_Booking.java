@@ -44,7 +44,7 @@ public class b5_Redbus_Booking {
 		wait.until(ExpectedConditions.elementToBeClickable(cc));
 		cc.click();
 
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 
 		WebElement element = driver.findElement(By.xpath("//body"));
 		element.sendKeys(Keys.ESCAPE);
@@ -61,7 +61,6 @@ public class b5_Redbus_Booking {
 			String a3 = driver.findElements(By.cssSelector(".fare.d-block")).get(i).getText();
 			System.out.println((i + 1) + "." + a2 + " : " + a3 + "\n");
 		}
-		
-		driver.close();
+//		driver.close();
 	}
 }

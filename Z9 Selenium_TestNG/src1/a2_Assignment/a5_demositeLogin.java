@@ -21,8 +21,6 @@ public class a5_demositeLogin {
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-		WebDriverWait wait = new WebDriverWait(driver, 20);
-
 		driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
 
 		driver.manage().deleteAllCookies();

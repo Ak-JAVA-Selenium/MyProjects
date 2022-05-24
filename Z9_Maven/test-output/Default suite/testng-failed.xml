@@ -3,16 +3,11 @@
 <suite parallel="none" name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test parallel="none" name="Default test(failed)">
     <classes>
-      <class name="Vtiger.VtigerTask_Script">
+      <class name="DataProvider.Rediiff_DataProvider">
         <methods>
-          <include name="testNewTaskDeletion"/>
-          <include name="login"/>
-          <include name="testNewTaskUpdation"/>
-          <include name="openBrower"/>
-          <include name="testCreateNewTask"/>
-          <include name="logout"/>
+          <include name="rediffReg"/>
         </methods>
-      </class> <!-- Vtiger.VtigerTask_Script -->
+      </class> <!-- DataProvider.Rediiff_DataProvider -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

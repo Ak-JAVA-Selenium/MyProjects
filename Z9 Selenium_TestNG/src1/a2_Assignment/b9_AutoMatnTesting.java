@@ -29,7 +29,6 @@ public class b9_AutoMatnTesting {
 				}
 			}
 		}
-
+		driver.close();
 	}
-
 }

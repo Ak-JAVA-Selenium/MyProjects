@@ -1,9 +1,7 @@
 package Basics;
 
 import org.testng.annotations.Test;
-import org.testng.annotations.Test;
 import org.testng.annotations.Parameters;
-import org.testng.annotations.Test;
 
 public class Example1 {
 
@@ -21,5 +19,4 @@ public class Example1 {
 	static void testCase3() {
 		System.out.println("Hello, I am TC1 from example3 class");
 	}
-
 }

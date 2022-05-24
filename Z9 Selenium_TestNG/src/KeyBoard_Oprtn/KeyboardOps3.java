@@ -14,10 +14,17 @@ import utilities.SeleniumUtility;
  */
 public class KeyboardOps3 {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		SeleniumUtility s1=new SeleniumUtility();
 		WebDriver driver=s1.setUp("chrome", "https://www.flipkart.com/");
 	
+		Thread.sleep(5000);
+//		driver.navigate().refresh();
+		//or
+//		driver.findElement(By.cssSelector("body")).sendKeys(Keys.F5);
+		//or
+//		driver.get("https://www.flipkart.com/");
+		//or
 		driver.findElement(By.cssSelector("body")).sendKeys(Keys.chord(Keys.CONTROL,"r"));
 		
 	}

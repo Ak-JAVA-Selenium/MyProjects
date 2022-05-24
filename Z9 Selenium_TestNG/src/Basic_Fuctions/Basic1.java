@@ -15,7 +15,7 @@ public class Basic1 {
 		String path2 = ".\\Drivers\\msedgedriver.exe";
 		// --> ".Driver folder & file location"
 
-		String path3 = "C:\\Users\\kumbh\\eclipse-workspace\\Z9 Selenium\\Drivers\\chromedriver.exe";
+		String path3 = "C:\\Users\\kumbh\\git\\MyProjects\\Z9 Selenium_TestNG\\Drivers\\chromedriver.exe";
 		// Properties --> path copy
 
 		System.setProperty("webdriver.gecko.driver", path1);

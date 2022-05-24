@@ -34,7 +34,7 @@ public class a5_Google_Search_ListCount {
 
 		// get the count of identify element
 		int suggCount = suggList.size();
-		System.out.println(suggCount);
+		System.out.println("Search results count : "+suggCount);
 		// to access one by one list element
 		for (int i = 0; i < suggCount; i++) {
 			System.out.println(suggList.get(i).getText());

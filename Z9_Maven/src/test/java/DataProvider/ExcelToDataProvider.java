@@ -65,6 +65,5 @@ public class ExcelToDataProvider {
 			}
 			System.out.println();
 		}
-		System.out.println(hi.getRowCount("Sheet1"));
 	}
 }

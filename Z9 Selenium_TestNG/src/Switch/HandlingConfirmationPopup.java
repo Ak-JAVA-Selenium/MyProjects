@@ -13,7 +13,7 @@ public class HandlingConfirmationPopup {
 		//as the required element is present inside the frame, so need to switch our control inside frame first
 		driver.switchTo().frame(0);
 		
-		driver.findElement(By.xpath("//button[text()='Try it']")).click();
+		driver.findElement(By.xpath("//button[@onclick='myFunction()']")).click();
 		System.out.println("Alert text msg is: "+driver.switchTo().alert().getText());
 		//driver.switchTo().alert().accept();
 		driver.switchTo().alert().dismiss();
@@ -25,6 +25,4 @@ In order handle any JavaScirpt Pop-up(application specific) we need use driver.s
 because java script popup doesn't contain HTML code
 we use predefined functions of Alert to perform any operation on it
 after every action control comes back to the main page
-
-
 */

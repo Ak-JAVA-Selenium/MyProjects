@@ -3,7 +3,6 @@ package Mouse_Oprtn;
 import java.util.List;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -20,16 +19,16 @@ public class MouseOp2 {
 		System.out.println("Main Menu option count: "+mainMenu.size());
 		//create an instance of Actions class by passing required browser instance to its constructor
 		Actions act=new Actions(driver);
-//		for(int i=0;i<mainMenu.size();i++) {
-//			WebElement option=mainMenu.get(i);
-//			act.moveToElement(option).perform();
-//			Thread.sleep(1000);
-//		}
-//		mouseHover(act, mainMenu);
-//		
+		for(int i=0;i<mainMenu.size();i++) {
+			WebElement option=mainMenu.get(i);
+			act.moveToElement(option).perform();
+			Thread.sleep(1000);
+		}	
+		mouseHover(act, mainMenu);
+		
 //		mouseHoverWithCords(act, mainMenu);
-//		
-		rightClick(act, mainMenu.get(1));
+		
+//		rightClick(act, mainMenu.get(2));
 		
 	}
 	static void rightClick(Actions act,WebElement option) throws InterruptedException {

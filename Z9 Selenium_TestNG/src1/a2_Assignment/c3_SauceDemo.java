@@ -2,8 +2,6 @@ package a2_Assignment;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.interactions.Actions;
-
 import utilities.Get;
 
 public class c3_SauceDemo {
@@ -28,5 +26,6 @@ public class c3_SauceDemo {
 			driver.navigate().to("https://www.saucedemo.com/");
 		}
 		Thread.sleep(2000);
+		driver.close();
 	}
 }

@@ -24,6 +24,7 @@ public class Method_AnyBrowserCall {
 			System.setProperty("webdriver.edge.driver", path);
 			ref = new EdgeDriver();
 		}
+		ref.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	}
 
 	public static void main(String[] args) throws Throwable {
@@ -37,6 +38,5 @@ public class Method_AnyBrowserCall {
 		Method_AnyBrowserCall.browser("edge");
 		Thread.sleep(3000);
 		ref.close();
-		ref.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	}
 }

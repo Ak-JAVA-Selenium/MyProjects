@@ -1,15 +1,12 @@
 package a2_Assignment;
 
-import java.util.Iterator;
 import java.util.List;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import utilities.Get;
 
 public class c7_etrain_Menu {
@@ -17,8 +14,8 @@ public class c7_etrain_Menu {
 	public static void main(String[] args) throws InterruptedException {
 
 		WebDriver driver = Get.setUp("chrome", "https://etrain.info/current-booking");
-		WebDriverWait wait = new WebDriverWait(driver, 20);
-		Actions act = new Actions(driver);
+//		WebDriverWait wait = new WebDriverWait(driver, 20);
+//		Actions act = new Actions(driver);
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("//input[@id='transstn1']")).sendKeys("Pune", Keys.ARROW_DOWN, Keys.ENTER,
 				Keys.TAB);
@@ -46,5 +43,6 @@ public class c7_etrain_Menu {
 				System.out.println(res);
 			}
 		}
+		
 	}
 }

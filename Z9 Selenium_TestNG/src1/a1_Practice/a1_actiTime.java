@@ -30,7 +30,7 @@ public class a1_actiTime {
 		System.out.println("Page Title  Length : " + driver.getTitle().length());
 		String expectedTitle = "actiTIME - Login";
 		String currentTitle = driver.getTitle();
-		if (CurrentURL.contentEquals(expectedURL)) {
+		if (currentTitle.contentEquals(expectedTitle)) {
 			System.out.println("Page Title is verified");
 		}
 		System.out.println("Page source length : " + driver.getPageSource().length());

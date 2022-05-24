@@ -1,14 +1,11 @@
 package a2_Assignment;
 
 import java.util.List;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 import utilities.Get;
 
@@ -17,8 +14,6 @@ public class b8_AutoMatnTestg_Oprtns {
 	public static void main(String[] args) throws InterruptedException {
 
 		WebDriver driver = Get.setUp("chrome", "http://demo.automationtesting.in/Register.html");
-
-		WebDriverWait wait = new WebDriverWait(driver, 20);
 
 		String ExUrl = "http://demo.automationtesting.in/Register.html";
 		System.out.println("======================");
@@ -30,7 +25,7 @@ public class b8_AutoMatnTestg_Oprtns {
 		}
 		String ExTitle = "Register";
 		String ActTitle = driver.getTitle();
-		if (ExUrl.equals(ActUrl)) {
+		if (ExTitle.equals(ActTitle)) {
 			System.out.println("Page Title verified successfully...");
 		} else {
 			System.out.println("Page Title verification failed...");

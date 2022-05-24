@@ -15,6 +15,7 @@ public class c2_CricInfo_Menu {
 	public static void main(String[] args) throws InterruptedException {
 	
 		WebDriver driver = Get.setUp("chrome", "https://www.espncricinfo.com/");
+		driver.manage().window().maximize();
 		Actions act = new Actions(driver);
 		
 		driver.findElement(By.cssSelector("body")).sendKeys(Keys.ESCAPE);
@@ -34,6 +35,6 @@ public class c2_CricInfo_Menu {
 				}
 			}
 		}
+		driver.close();
 	}
 
-}

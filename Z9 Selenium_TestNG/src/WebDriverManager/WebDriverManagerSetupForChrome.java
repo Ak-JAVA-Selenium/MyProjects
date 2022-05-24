@@ -26,6 +26,7 @@ public class WebDriverManagerSetupForChrome {
 		
 		driver.get("http://demo.automationtesting.in/Register.html");
 		
+		driver.close();
 	}
 
 }
