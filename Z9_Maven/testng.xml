@@ -7,7 +7,6 @@
 	<test thread-count="5" name="Test">
 		<classes>
 			<class name="DataProvider.Rediiff_DataProvider" />
-			<class name="Vtiger.VtigerTask_Script" />
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->

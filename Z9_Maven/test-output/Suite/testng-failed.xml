@@ -6,16 +6,11 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="Vtiger.VtigerTask_Script">
+      <class name="DataProvider.Rediiff_DataProvider">
         <methods>
-          <include name="testNewTaskDeletion"/>
-          <include name="login"/>
-          <include name="testNewTaskUpdation"/>
-          <include name="openBrower"/>
-          <include name="closeBrowser"/>
-          <include name="logout"/>
+          <include name="action"/>
         </methods>
-      </class> <!-- Vtiger.VtigerTask_Script -->
+      </class> <!-- DataProvider.Rediiff_DataProvider -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

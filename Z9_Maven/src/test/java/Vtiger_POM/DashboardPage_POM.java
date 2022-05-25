@@ -1,4 +1,4 @@
-package Vtiger;
+package Vtiger_POM;
 
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;

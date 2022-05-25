@@ -10,17 +10,18 @@ import utilities.MySeleniumUtility;
 
 public class Rediiff_DataProvider extends MySeleniumUtility {
 
-	@DataProvider(name="getData")
-	public Object[][] datfromexcel(){
+	@DataProvider(name = "getData")
+	public Object[][] datfromexcel() {
 		ExcelToDataProvider hi = new ExcelToDataProvider(".\\src\\test\\resources\\testData\\Book1.xlsx");
 		Object[][] data = hi.getData("Sheet1");
 		return data;
 	}
-	@Test (dataProvider = "getData")
+
+	@Test(dataProvider = "getData", priority = 1)
 	public void rediffReg(String fullname, String rediffId, String password, String retypepass, String altemail,
 			String mobno, String dob, String gender, String country) {
 		WebDriver driver = setUp("chrome", "http://register.rediff.com/register/register.php?FormName=user_details");
-		
+
 		driver.findElement(By.xpath("//input[starts-with(@name,'name' )]")).clear();
 		driver.findElement(By.xpath("//input[starts-with(@name,'name' )]")).sendKeys(fullname);
 
@@ -35,10 +36,10 @@ public class Rediiff_DataProvider extends MySeleniumUtility {
 
 		driver.findElement(By.xpath("//input[starts-with(@name,'altemail')]")).clear();
 		driver.findElement(By.xpath("//input[starts-with(@name,'altemail')]")).sendKeys(altemail);
-		
+
 		driver.findElement(By.id("mobno")).clear();
 		driver.findElement(By.id("mobno")).sendKeys(mobno);
-		
+
 		String Datearr[] = dob.split(" ");
 		String day = Datearr[0];
 		String month = Datearr[1];
@@ -59,7 +60,13 @@ public class Rediiff_DataProvider extends MySeleniumUtility {
 		Select sel3 = new Select(driver.findElement(By.xpath("//select[@id='country']")));
 		driver.findElement(By.xpath("//select[@id='country']")).click();
 		sel3.selectByVisibleText(country);
-		
+
 		cleanUp();
+	}
+
+	@Test(priority = 2)
+	public void action() {
+		WebDriver driver = setUp("chrome", "http://register.rediff.com/register/register.php?FormName=user_details");
+		driver.findElement(By.xpath("//outpuntt[starts-with(@name,'' )]")).sendKeys("akshay");
 	}
 }

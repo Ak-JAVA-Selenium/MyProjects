@@ -1,26 +1,26 @@
 package Listners;
 
+import java.util.Date;
+
 import org.testng.IReporter;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
-
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
-import com.aventstack.extentreports.observer.ExtentObserver;
-import com.aventstack.extentreports.observer.entity.ObservedEntity;
-import com.aventstack.extentreports.observer.entity.ReportEntity;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
-public class ExtendReport implements ITestListener,IReporter {
-
+public class ExtendReport implements ITestListener, IReporter {
+	ExtentSparkReporter reporter;
 	ExtentReports report;
 	ExtentTest test;
 
 	public ExtendReport() {
-		ExtentSparkReporter reporter = new ExtentSparkReporter(".\\src\\test\\resources\\ExtentReports\\report.html");
+		Date date = new Date();
+		String name = date.toString().replace(" ", "").replace(":", "");
+		reporter = new ExtentSparkReporter(".\\src\\test\\resources\\ExtentReports\\report"+name+".html");
 		reporter.config().setDocumentTitle("Test Doc Title");
 		reporter.config().setReportName("Vtiger Automation");
 		reporter.config().setTheme(Theme.STANDARD);
@@ -42,9 +42,9 @@ public class ExtendReport implements ITestListener,IReporter {
 
 	@Override
 	public void onTestFailure(ITestResult result) {
-		ScreenshotNew sss= new ScreenshotNew();
+		ScreenshotNew sss = new ScreenshotNew();
 		String path = sss.TakeSS();
-		test = report.createTest(result.getMethod().getMethodName());
+		test = report.createTest(result.getMethod().getMethodName()).addScreenCaptureFromBase64String(result.getMethod().getMethodName());
 		test.fail(result.getThrowable()).addScreenCaptureFromPath(path);
 	}
 

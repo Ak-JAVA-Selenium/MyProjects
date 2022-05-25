@@ -1,6 +1,7 @@
-package Vtiger;
+package Vtiger_POM;
 
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
@@ -30,6 +31,7 @@ public class VtigerTask_Script extends MySeleniumUtility{
 	public void testCreateNewTask() {
 		test3=test2.selectLead();
 		test3.createLead("Akshay", "Bote");
+		Assert.assertTrue(false);
 	}
 	@Test
 	public void testNewTaskUpdation() {
@@ -46,6 +48,6 @@ public class VtigerTask_Script extends MySeleniumUtility{
 	}
 	@AfterTest
 	public void closeBrowser() {
-//		cleanUp();
+		cleanUp();
 	}
 }
