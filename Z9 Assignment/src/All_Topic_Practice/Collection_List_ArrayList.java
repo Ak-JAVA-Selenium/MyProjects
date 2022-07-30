@@ -3,6 +3,9 @@ package All_Topic_Practice;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Vector;
 
 public class Collection_List_ArrayList {
 
@@ -10,6 +13,7 @@ public class Collection_List_ArrayList {
 
 		ArrayList list = new ArrayList();// Creating arraylist
 
+		System.out.println("default size of list: " + list.size());
 		list.add("Mango");// auto-upcasting from String to Object class object
 		list.add(1235);// first boxing to Integer class object---> upcasting to object class
 		list.add("Banana");
@@ -19,6 +23,10 @@ public class Collection_List_ArrayList {
 		list.add(true);// first boxing to Boolean class object---> upcasting to object class
 		list.add(new Collection_List_ArrayList());// test class object will be upcasted to Object class object
 
+		list.forEach(hi -> { 
+			System.out.println("8888888888888888"+hi);
+		});
+		
 		System.out.println("================================");
 		System.out.println("size of list: " + list.size());
 		System.out.println("================================");
@@ -148,5 +156,17 @@ public class Collection_List_ArrayList {
 		Collections.reverse(al);
 		System.out.println("Reversing sorted Elements of collection: " + al);
 		System.out.println("=====================================");
+		
+		ArrayList list0 = new ArrayList();
+		List<String> list1 = new ArrayList<String>();
+		List<Integer> list2 = new ArrayList<Integer>();
+
+		LinkedList list3 = new LinkedList();
+		List<String> list4 = new LinkedList<String>();
+		List<Integer> list5 = new LinkedList<Integer>();
+		
+		Vector list6 = new Vector();
+		List<String> list7 = new Vector<String>();
+		List<Integer> list8 = new Vector<Integer>();
 	}
 }

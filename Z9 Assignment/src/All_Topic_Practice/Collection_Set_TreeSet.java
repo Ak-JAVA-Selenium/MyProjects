@@ -1,7 +1,6 @@
 package All_Topic_Practice;
 
-import java.util.Iterator;
-import java.util.TreeSet;
+import java.util.*;
 
 public class Collection_Set_TreeSet {
 

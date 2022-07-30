@@ -10,7 +10,7 @@ public class Collection_Queue_Priority {
 
 		Queue queue = new PriorityQueue();
 		// while adding element in Queue, it will always keep smallest element on the top
-		queue.add(123);
+		queue.add('k');
 		queue.add(245);
 		queue.add(10);
 		queue.add(105);

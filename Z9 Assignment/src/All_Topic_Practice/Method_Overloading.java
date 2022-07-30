@@ -7,8 +7,8 @@ public class Method_Overloading {
 	 * 2. number of argument differ //or 
 	 * 3. position of argument differ
 	 */
-	public static double add(int a, int b) {
-		double res = a + b;
+	public static int add(int a, int b) {
+		int res = a + b;
 		System.out.println("\n addition1 =" + res);
 		return res;
 	}

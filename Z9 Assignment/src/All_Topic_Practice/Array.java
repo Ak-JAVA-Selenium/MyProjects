@@ -103,6 +103,7 @@ public class Array {
 		for (int i : arr2) {
 			System.out.println(i);
 		}
+	
 		System.out.println("*********Hetrogeneous Array***********");
 		Object arry[]=new Object[5];
 		Object arry1[]= {'a',01,99.99,"aghgshgjs",arr};  

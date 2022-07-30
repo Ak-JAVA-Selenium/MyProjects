@@ -38,6 +38,7 @@ public class Collection_Set_HashSet {
 		// Removing elements on the basis of specified condition
 		set.removeIf(str -> str.contains("Vijay"));
 		System.out.println("After invoking removeIf() method: " + set);
+		set.add("Vijay");
 		// Removing all the elements available in the set
 		set.clear();
 		System.out.println("After invoking clear() method: " + set);

@@ -32,5 +32,14 @@ public class Collection_List_Vector {
 		list.add(0);
 		System.out.println("Elements :" + list);
 		System.out.println("Capacity : " + list.capacity());
+		
+		Vector list6 = new Vector();
+		list6.add(120);
+		list6.add(120.33);
+		list6.add('m');
+		list6.add("ghjkl");
+		list6.addElement(null);
+		
+		System.out.println(list6);
 	}
 }

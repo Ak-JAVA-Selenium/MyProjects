@@ -1,7 +1,6 @@
 package utilities;
 
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeMethod;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.Dimension;

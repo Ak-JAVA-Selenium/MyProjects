@@ -14,6 +14,8 @@ public class Ascending_Descending {
 
 		int min = 0;
 
+		System.out.println();
+
 		for (int i = 0; i < arr.length; i++) {
 			for (int j = i + 1; j < arr.length; j++) {
 				if (arr[i] > arr[j]) {
@@ -28,5 +30,24 @@ public class Ascending_Descending {
 			System.out.print(i + " ");
 		}
 		System.out.print("]");
+		
+//		int max = 0;
+//
+//		System.out.println();
+//
+//		for (int i = 0; i < arr.length; i++) {
+//			for (int j = i + 1; j < arr.length; j++) {
+//				if (arr[i] > arr[j]) {
+//					max = arr[i];
+//					arr[i] = arr[j];
+//					arr[j] = min;
+//				}
+//			}
+//		}
+//		System.out.print("After sorting, Array : [ ");
+//		for (int i : arr) {
+//			System.out.print(i + " ");
+//		}
+//		System.out.print("]");
 	}
 }

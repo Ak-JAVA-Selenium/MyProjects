@@ -1,5 +1,4 @@
 package All_Topic_Practice;
-
 /**
  * try block can have multiple catch block, but only one catch block will be
  * executed try can handle only one abnormal condition at a time
